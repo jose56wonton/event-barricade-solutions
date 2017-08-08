@@ -1,5 +1,6 @@
 function slider() {
-    if (document.body.scrollTop >450) {    
+    
+    if (document.body.scrollTop > $("div.nav-1").height()) {    
         $('.nav-2').stop().animate({"margin-top": '0'});
     }
     else

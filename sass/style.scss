@@ -62,138 +62,21 @@ $lighter: #B3A6A8;
   font-family: 'Raleway', sans-serif;
 }
 
+@import '_nav-1.scss';
+@import '_nav-2.scss';
 
-
-.nav-1{
-  width: 100%;
-  height: 500px;
-  padding: 30px 100px;
-  position: relative;
-  background-image: url("../img/EBS_fb_cov.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:cover;
-  .nav-1-items{
-    width: 960px;
-    text-align: right;
-    margin: 0 auto;    
-    text-align: right;
-    a{
-      color: #FFF;
-      text-decoration: none;
-      font: 20px Raleway;
-      margin: 0px 10px;
-      padding: 10px 10px;
-      display: inline-block;
-      position: relative;
-      z-index: 0;
-      cursor: pointer;
-    }
-    a:before,a:after
-    {
-        position: absolute;
-        opacity: 0;
-        width: 0%;
-        height: 2px;
-        content: '';
-        background: #FFF;
-        transition: all 0.3s;
-    }
-    a:before
-    {
-        left: 0px;
-        top: 0px;
-    }
-    a:after
-    {
-        right: 0px;
-        bottom: 0px;
-    }
-     a:hover:before,  a:hover:after
-    {
-        opacity: 1;
-        width: 100%;
-    }
+@media screen and (min-width: 0px){
+  .mission{
+      width: 95%;
   }
 }
-  
-
-.nav-2{
-  background-color: $dark;
-
-  position: fixed;
-  margin-top: -60px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  top: 0;
-  height:60px;
-  .nav-2-items{
-    width: 960px;
-    margin:0 auto;
-    flex: 1; 
-    display: flex;
-    align-items: center;
-    .left-nav{
-      flex: 1;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      #logo{
-        height:40px;
-      }
-    }
-    .right-nav{
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      text-align: center;
-      a{
-      color: #FFF;
-      text-decoration: none;
-      font: 20px Raleway;
-      margin: 0px 10px;
-      padding: 10px 10px;
-      display: inline-block;
-      position: relative;
-      z-index: 0;
-      cursor: pointer;
-    }
-    a:before,a:after
-    {
-        position: absolute;
-        opacity: 0;
-        width: 0%;
-        height: 2px;
-        content: '';
-        background: #FFF;
-        transition: all 0.3s;
-    }
-    a:before
-    {
-        left: 0px;
-        top: 0px;
-    }
-    a:after
-    {
-        right: 0px;
-        bottom: 0px;
-    }
-     a:hover:before,  a:hover:after
-    {
-        opacity: 1;
-        width: 100%;
-    }
-    }
+@media screen and (min-width: 1024px){
+  .mission{
+      width: 960px;
   }
 }
-
-
-
 
 .mission{
-  width: 960px;
   padding: 50px 100px;
   margin: 0 auto;
   display: flex;
@@ -212,35 +95,85 @@ $lighter: #B3A6A8;
     color: $light;
   }
 }
+
+@media screen and (min-width: 0px){
+  .supplies{
+      width: 95%;
+      flex-direction: column;
+      padding: 50px 100px;
+  }
+}
+@media screen and (min-width: 767px){
+  .supplies{
+      width: 95%;
+      flex-direction: row;
+      padding: 50px 0;
+  }
+}
+@media screen and (min-width: 1024px){
+  .supplies{
+      width: 960px;
+  }
+}
 .supplies{
-  width: 960px;
   margin: 0 auto;
-  padding: 50px 0;
+  
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: 3px solid $lighter;
   
   div{
     flex: 1 30%;
-    margin: 1%;
+    padding: 20px;
     img{
       width: 100%;
+
     }
+  }
+}
+
+
+
+@media screen and (min-width: 0px){
+  .story{
+      width: 95%;
+      flex-direction: column;
+      .left-div{
+        text-align: left;
+      }
+
+  }
+}
+@media screen and (min-width: 767px){
+  .story{
+      width: 95%;
+      flex-direction: row;
+      .left-div{
+        text-align: left;
+      }
+
+  }
+}
+@media screen and (min-width: 1024px){
+  .story{
+      width: 960px;
+      flex-direction: row;
+      .left-div{
+        text-align: right;
+      }
   }
 }
 .story{
 
   border-bottom: 3px solid $lighter;
-  width: 960px;
+  
   padding: 50px 100px;
   margin: 0 auto;
   display: flex;
   .left-div{
     flex: 1;
     padding: 20px;
-    text-align: right;
     img{
       width: 100%;
     }
@@ -263,8 +196,20 @@ $lighter: #B3A6A8;
   }
 }
 
+
+
+
+@media screen and (min-width: 0px){
+  .contact{
+      width: 95%;
+  }
+}
+@media screen and (min-width: 1024px){
+  .contact{
+      width: 960px;
+  }
+}
 .contact{
-  width: 960px;
   padding: 50px 100px;
   margin: 0 auto;
   display: flex;
@@ -275,7 +220,7 @@ $lighter: #B3A6A8;
   #map {
     height: 180px;
     width: 400px;
-    margin: 0 auto;
+    margin: 30px auto;
   }
   h1{
     font-size: 34px;
@@ -287,6 +232,7 @@ $lighter: #B3A6A8;
     font-size: 25px;
     color: $light;
   }
+  
 }
 .footer{
   display: flex;
