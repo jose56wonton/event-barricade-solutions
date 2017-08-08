@@ -7,31 +7,35 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
     </head>
     <body>
        
         
-        <div class="nav">
-            <ul class="left-nav">
-                <li>
-                    <a href="#">
-                        <img alt="Brand" id="logo" src="img/header_logo.png.">            
-                    </a>
-                </li>
-            </ul>
-            
-            <ul class="right-nav">
-                <li><a>Mission</a></li>
-                <li><a>Story</a></li>
-                <li><a>Contact</a></li>                
-            </ul>
+        <div class="nav-1">
+            <div class="nav-1-items">
+               <a href="#Mission">Mission</a>
+               <a href="#Story">Story</a>
+               <a href="#Contact">Contact</a>
+            </div>                     
         </div>
-        <div class="banner">
-            <img alt="Supplies" src="img/EBS_fb_cov.jpg">
+        <div class="nav-2">
+            <div class="nav-2-items">
+                <div class="left-nav">                    
+                    <a href="#"><img alt="Brand" id="logo" src="img/header_logo.png."></a>
+                </div>                
+                <div class="right-nav">
+                    <a href="#Mission">Mission</a>
+                    <a href="#Story">Story</a>
+                    <a href="#Contact">Contact</a>               
+                </div>
+            </div>  
         </div>
+        
         <div class="mission">
-            <h1>OUR MISSION</h1>
+            
+            <h1><a class="anchor" name="Mission">OUR MISSION</a></h1>
             <br>
             <p>Event Barricade Solutions is an event crowd management company. We are based out of the Quad Cities, but service event around the Mid-West. </p>
             <br>
@@ -50,9 +54,26 @@
                  <img alt="Supplies" src="img/ebs3.jpg">
             </div>
         </div>
+        
+        <div class="story">
+            <div class="left-div">
+                <h1><a class="anchor" name="Story">Our Story</a></h1>
+                <img alt="Supplies" src="img/group_profile.png">
+            </div>
+            <div class="right-div">
+                
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <br>
+                <p>Nam nulla felis, fringilla vitae feugiat eu, commodo sed ipsum.</p>
+                <br>
+                <p>Nulla bibendum sem blandit tincidunt blandit. Morbi bibendum lacus dui, ac feugiat augue facilisis at.</p>
+            </div>
+        </div>
+        
         <div class="contact">
             <div>
-                <h1>CONTACT US</h1>
+                <h1><a class="anchor" name="Contact">CONTACT US</a></h1>
                 <p>360 813 4044</p>
                 <p>eventbarricadesolutions@gmail.com</p>
             </div>
@@ -85,4 +106,5 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL-Cy9rw48mDL0A99At9iibYMzIY_u3eo&callback=initMap">
     </script> -->
+    <script src="js/index.js"></script>
 </html>

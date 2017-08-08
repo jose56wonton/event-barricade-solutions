@@ -47,6 +47,7 @@ table {
 $cherry: #ff5000;
 $dark: #422225;
 $light: #684E51;
+$lighter: #B3A6A8;
 
 
 @font-face {
@@ -63,71 +64,143 @@ $light: #684E51;
 
 
 
-.nav{
-  height:100px;
-  padding: 30px 100px;
-  text-align: center;
-  position: relative;
-  display: flex;
-  
-
-
-  .left-nav{
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    #logo{
-      height:70px;
-    }
-
-  }
-  .right-nav{
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
-
-    li{
-      display: inline-block;
-      padding: 10px;
-      border: 1px solid white;
-      transition: border .4s ease;
-      a{
-        font-size: 23px;
-        color:$dark;
-        
-      }
-      a:hover{
-        color:$light;
-      }
-    }
-    li:hover{
-      border-bottom: 1px solid $dark;
-      border-radius: 2px;
-    }
-
-  }
-}
-
-
-
-.banner{
-  
+.nav-1{
   width: 100%;
-  img{
-    width: 100%;
+  height: 500px;
+  padding: 30px 100px;
+  position: relative;
+  background-image: url("../img/EBS_fb_cov.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  .nav-1-items{
+    width: 960px;
+    text-align: right;
+    margin: 0 auto;    
+    text-align: right;
+    a{
+      color: #FFF;
+      text-decoration: none;
+      font: 20px Raleway;
+      margin: 0px 10px;
+      padding: 10px 10px;
+      display: inline-block;
+      position: relative;
+      z-index: 0;
+      cursor: pointer;
+    }
+    a:before,a:after
+    {
+        position: absolute;
+        opacity: 0;
+        width: 0%;
+        height: 2px;
+        content: '';
+        background: #FFF;
+        transition: all 0.3s;
+    }
+    a:before
+    {
+        left: 0px;
+        top: 0px;
+    }
+    a:after
+    {
+        right: 0px;
+        bottom: 0px;
+    }
+     a:hover:before,  a:hover:after
+    {
+        opacity: 1;
+        width: 100%;
+    }
   }
 }
+  
+
+.nav-2{
+  background-color: $dark;
+
+  position: fixed;
+  margin-top: -60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  height:60px;
+  .nav-2-items{
+    width: 960px;
+    margin:0 auto;
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    .left-nav{
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      #logo{
+        height:40px;
+      }
+    }
+    .right-nav{
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      a{
+      color: #FFF;
+      text-decoration: none;
+      font: 20px Raleway;
+      margin: 0px 10px;
+      padding: 10px 10px;
+      display: inline-block;
+      position: relative;
+      z-index: 0;
+      cursor: pointer;
+    }
+    a:before,a:after
+    {
+        position: absolute;
+        opacity: 0;
+        width: 0%;
+        height: 2px;
+        content: '';
+        background: #FFF;
+        transition: all 0.3s;
+    }
+    a:before
+    {
+        left: 0px;
+        top: 0px;
+    }
+    a:after
+    {
+        right: 0px;
+        bottom: 0px;
+    }
+     a:hover:before,  a:hover:after
+    {
+        opacity: 1;
+        width: 100%;
+    }
+    }
+  }
+}
+
+
+
+
 .mission{
   width: 960px;
-  padding: 100px 100px;
+  padding: 50px 100px;
   margin: 0 auto;
   display: flex;
   justify-content:center;
   align-content:center;
   flex-direction:column;
+  border-bottom: 3px solid $lighter;
   h1{
     font-size: 34px;
     margin: 14px auto;
@@ -142,10 +215,12 @@ $light: #684E51;
 .supplies{
   width: 960px;
   margin: 0 auto;
+  padding: 50px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  border-bottom: 3px solid $lighter;
   
   div{
     flex: 1 30%;
@@ -155,9 +230,42 @@ $light: #684E51;
     }
   }
 }
+.story{
+
+  border-bottom: 3px solid $lighter;
+  width: 960px;
+  padding: 50px 100px;
+  margin: 0 auto;
+  display: flex;
+  .left-div{
+    flex: 1;
+    padding: 20px;
+    text-align: right;
+    img{
+      width: 100%;
+    }
+    h1{
+      
+      font-size: 34px;
+      margin: 14px auto;
+      color: $dark;
+    }
+  }
+  .right-div{
+    flex: 1;
+    padding: 20px;
+    
+    p{
+      line-height: 30px;
+      font-size: 25px;
+      color: $light;
+    }
+  }
+}
+
 .contact{
   width: 960px;
-  padding: 100px 100px;
+  padding: 50px 100px;
   margin: 0 auto;
   display: flex;
   text-align: center;
@@ -181,11 +289,13 @@ $light: #684E51;
   }
 }
 .footer{
-   display: flex;
+  display: flex;
   text-align: center;
   justify-content:center;
   align-content:center;
-  
+  padding: 100px;
+  background-color: $dark;
+  color: white;
 }
 
 
@@ -193,14 +303,6 @@ $light: #684E51;
 
 
 
-
-.large_content{
-  width: 100%;
-  height: 1000px;
-  background: #fff url("../img/EBS_fb_cov.jpg") no-repeat center;
+.anchor{
+  padding-top: 110px;
 }
-.small_content{
-  width: 100%;
-  height:500px;
-}
-

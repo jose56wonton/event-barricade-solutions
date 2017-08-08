@@ -50,52 +50,113 @@ table {
   font-family: 'Open Sans', sans-serif;
   font-family: 'Raleway', sans-serif; }
 
-.nav {
-  height: 100px;
+.nav-1 {
+  width: 100%;
+  height: 500px;
   padding: 30px 100px;
-  text-align: center;
   position: relative;
-  display: flex; }
-  .nav .left-nav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; }
-    .nav .left-nav #logo {
-      height: 70px; }
-  .nav .right-nav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center; }
-    .nav .right-nav li {
+  background-image: url("../img/EBS_fb_cov.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .nav-1 .nav-1-items {
+    width: 960px;
+    text-align: right;
+    margin: 0 auto;
+    text-align: right; }
+    .nav-1 .nav-1-items a {
+      color: #FFF;
+      text-decoration: none;
+      font: 20px Raleway;
+      margin: 0px 10px;
+      padding: 10px 10px;
       display: inline-block;
-      padding: 10px;
-      border: 1px solid white;
-      transition: border .4s ease; }
-      .nav .right-nav li a {
-        font-size: 23px;
-        color: #422225; }
-      .nav .right-nav li a:hover {
-        color: #684E51; }
-    .nav .right-nav li:hover {
-      border-bottom: 1px solid #422225;
-      border-radius: 2px; }
+      position: relative;
+      z-index: 0;
+      cursor: pointer; }
+    .nav-1 .nav-1-items a:before, .nav-1 .nav-1-items a:after {
+      position: absolute;
+      opacity: 0;
+      width: 0%;
+      height: 2px;
+      content: '';
+      background: #FFF;
+      transition: all 0.3s; }
+    .nav-1 .nav-1-items a:before {
+      left: 0px;
+      top: 0px; }
+    .nav-1 .nav-1-items a:after {
+      right: 0px;
+      bottom: 0px; }
+    .nav-1 .nav-1-items a:hover:before, .nav-1 .nav-1-items a:hover:after {
+      opacity: 1;
+      width: 100%; }
 
-.banner {
-  width: 100%; }
-  .banner img {
-    width: 100%; }
+.nav-2 {
+  background-color: #422225;
+  position: fixed;
+  margin-top: -60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  height: 60px; }
+  .nav-2 .nav-2-items {
+    width: 960px;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    align-items: center; }
+    .nav-2 .nav-2-items .left-nav {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+      .nav-2 .nav-2-items .left-nav #logo {
+        height: 40px; }
+    .nav-2 .nav-2-items .right-nav {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center; }
+      .nav-2 .nav-2-items .right-nav a {
+        color: #FFF;
+        text-decoration: none;
+        font: 20px Raleway;
+        margin: 0px 10px;
+        padding: 10px 10px;
+        display: inline-block;
+        position: relative;
+        z-index: 0;
+        cursor: pointer; }
+      .nav-2 .nav-2-items .right-nav a:before, .nav-2 .nav-2-items .right-nav a:after {
+        position: absolute;
+        opacity: 0;
+        width: 0%;
+        height: 2px;
+        content: '';
+        background: #FFF;
+        transition: all 0.3s; }
+      .nav-2 .nav-2-items .right-nav a:before {
+        left: 0px;
+        top: 0px; }
+      .nav-2 .nav-2-items .right-nav a:after {
+        right: 0px;
+        bottom: 0px; }
+      .nav-2 .nav-2-items .right-nav a:hover:before, .nav-2 .nav-2-items .right-nav a:hover:after {
+        opacity: 1;
+        width: 100%; }
 
 .mission {
   width: 960px;
-  padding: 100px 100px;
+  padding: 50px 100px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  border-bottom: 3px solid #B3A6A8; }
   .mission h1 {
     font-size: 34px;
     margin: 14px auto;
@@ -108,19 +169,45 @@ table {
 .supplies {
   width: 960px;
   margin: 0 auto;
+  padding: 50px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  border-bottom: 3px solid #B3A6A8; }
   .supplies div {
     flex: 1 30%;
     margin: 1%; }
     .supplies div img {
       width: 100%; }
 
+.story {
+  border-bottom: 3px solid #B3A6A8;
+  width: 960px;
+  padding: 50px 100px;
+  margin: 0 auto;
+  display: flex; }
+  .story .left-div {
+    flex: 1;
+    padding: 20px;
+    text-align: right; }
+    .story .left-div img {
+      width: 100%; }
+    .story .left-div h1 {
+      font-size: 34px;
+      margin: 14px auto;
+      color: #422225; }
+  .story .right-div {
+    flex: 1;
+    padding: 20px; }
+    .story .right-div p {
+      line-height: 30px;
+      font-size: 25px;
+      color: #684E51; }
+
 .contact {
   width: 960px;
-  padding: 100px 100px;
+  padding: 50px 100px;
   margin: 0 auto;
   display: flex;
   text-align: center;
@@ -144,15 +231,12 @@ table {
   display: flex;
   text-align: center;
   justify-content: center;
-  align-content: center; }
+  align-content: center;
+  padding: 100px;
+  background-color: #422225;
+  color: white; }
 
-.large_content {
-  width: 100%;
-  height: 1000px;
-  background: #fff url("../img/EBS_fb_cov.jpg") no-repeat center; }
-
-.small_content {
-  width: 100%;
-  height: 500px; }
+.anchor {
+  padding-top: 110px; }
 
 /*# sourceMappingURL=style.css.map */
