@@ -46,7 +46,9 @@ table {
   font-family: 'icon_font';
   src: url("../fonts/tgl_0-1451eng.ttf"); }
 * {
-  font-family: 'icon_font'; }
+  font-family: 'icon_font';
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif; }
 
 .nav {
   height: 100px;
@@ -69,33 +71,17 @@ table {
     text-align: center; }
     .nav .right-nav li {
       display: inline-block;
-      padding: 10px; }
+      padding: 10px;
+      border: 1px solid white;
+      transition: border .4s ease; }
       .nav .right-nav li a {
         font-size: 23px;
         color: #422225; }
       .nav .right-nav li a:hover {
         color: #684E51; }
-
-div.borderXwidth a:before, div.borderXwidth a:after {
-  position: absolute;
-  opacity: 0;
-  width: 0%;
-  height: 2px;
-  content: '';
-  background: #FFF;
-  transition: all 0.3s; }
-
-div.borderXwidth a:before {
-  left: 0px;
-  top: 0px; }
-
-div.borderXwidth a:after {
-  right: 0px;
-  bottom: 0px; }
-
-div.borderXwidth a:hover:before, div.borderXwidth a:hover:after {
-  opacity: 1;
-  width: 100%; }
+    .nav .right-nav li:hover {
+      border-bottom: 1px solid #422225;
+      border-radius: 2px; }
 
 .banner {
   width: 100%; }
@@ -168,8 +154,5 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after {
 .small_content {
   width: 100%;
   height: 500px; }
-
-* {
-  font-family: 'Open Sans', sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
