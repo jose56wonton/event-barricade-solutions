@@ -66,8 +66,7 @@ table {
     .nav-1 .large_logo {
       display: none; }
     .nav-1 .nav-1-items {
-      text-align: center;
-      margin: 0 auto; }
+      text-align: center; }
       .nav-1 .nav-1-items img {
         height: 50px; }
     .nav-1 a {
@@ -114,7 +113,7 @@ table {
       width: 900px;
       display: block;
       text-align: right;
-      margin: 0 auto; }
+      margin: 50px auto; }
       .nav-1 .large_logo img {
         width: 100%; }
     .nav-1 .nav-1-items {
