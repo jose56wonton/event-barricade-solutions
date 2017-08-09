@@ -132,10 +132,30 @@ table {
       cursor: pointer; } }
 @media screen and (min-width: 0px) {
   .nav-2-items {
-    width: 95%; } }
+    width: 95%; }
+    .nav-2-items .left-nav {
+      flex: 1; }
+    .nav-2-items .right-nav {
+      flex: 3; }
+    .nav-2-items #logo {
+      height: 20px; }
+    .nav-2-items a {
+      font: 20px;
+      margin: 0px 10px;
+      padding: 0px 10px; } }
 @media screen and (min-width: 1024px) {
   .nav-2-items {
-    width: 960px; } }
+    width: 960px; }
+    .nav-2-items .left-nav {
+      flex: 1; }
+    .nav-2-items .right-nav {
+      flex: 1; }
+    .nav-2-items #logo {
+      height: 26px; }
+    .nav-2-items a {
+      font: 26px;
+      margin: 0px 10px;
+      padding: 10px 10px; } }
 .nav-2 {
   background-color: #422225;
   width: 100%;
@@ -151,14 +171,12 @@ table {
     display: flex;
     align-items: center; }
     .nav-2 .nav-2-items .left-nav {
-      flex: 1;
       display: flex;
       justify-content: flex-start;
       align-items: center; }
       .nav-2 .nav-2-items .left-nav #logo {
         height: 26px; }
     .nav-2 .nav-2-items .right-nav {
-      flex: 1;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -166,9 +184,6 @@ table {
     .nav-2 .nav-2-items a {
       color: #FFF;
       text-decoration: none;
-      font: 26px;
-      margin: 0px 10px;
-      padding: 10px 10px;
       display: inline-block;
       position: relative;
       z-index: 0;
@@ -198,7 +213,7 @@ table {
   .mission {
     width: 960px; } }
 .mission {
-  padding: 50px 100px;
+  padding: 50px 20px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -218,12 +233,12 @@ table {
   .supplies {
     width: 95%;
     flex-direction: column;
-    padding: 50px 100px; } }
+    padding: 50px 20px; } }
 @media screen and (min-width: 767px) {
   .supplies {
     width: 95%;
     flex-direction: row;
-    padding: 50px 0; } }
+    padding: 50px 20px; } }
 @media screen and (min-width: 1024px) {
   .supplies {
     width: 960px; } }
@@ -244,22 +259,29 @@ table {
     width: 95%;
     flex-direction: column; }
     .story .left-div {
-      text-align: left; } }
+      text-align: left;
+      padding: 20px; }
+    .story .right-div {
+      padding: 20px; } }
 @media screen and (min-width: 767px) {
   .story {
     width: 95%;
     flex-direction: row; }
     .story .left-div {
-      text-align: left; } }
+      text-align: left; }
+    .story .right-div {
+      padding: 60px 20px 20px 20px; } }
 @media screen and (min-width: 1024px) {
   .story {
     width: 960px;
     flex-direction: row; }
     .story .left-div {
-      text-align: right; } }
+      text-align: right; }
+    .story .right-div {
+      padding: 60px 20px 20px 20px; } }
 .story {
   border-bottom: 3px solid #B3A6A8;
-  padding: 50px 100px;
+  padding: 50px 20px;
   margin: 0 auto;
   display: flex; }
   .story .left-div {
@@ -272,8 +294,7 @@ table {
       margin: 14px auto;
       color: #422225; }
   .story .right-div {
-    flex: 1;
-    padding: 20px; }
+    flex: 1; }
     .story .right-div p {
       line-height: 30px;
       font-size: 25px;
@@ -281,30 +302,55 @@ table {
 
 @media screen and (min-width: 0px) {
   .contact {
-    width: 95%; } }
+    width: 95%;
+    flex-direction: column-reverse; }
+    .contact .left-div {
+      text-align: left;
+      padding: 20px; }
+    .contact p {
+      line-height: 20px;
+      font-size: 15px; } }
+@media screen and (min-width: 400px) {
+  .contact p {
+    line-height: 25px;
+    font-size: 18px; } }
+@media screen and (min-width: 767px) {
+  .contact {
+    width: 95%;
+    flex-direction: row; }
+    .contact .left-div {
+      text-align: right;
+      padding: 80px 20px 20px 20px; } }
 @media screen and (min-width: 1024px) {
   .contact {
-    width: 960px; } }
+    width: 960px;
+    flex-direction: row; }
+    .contact .left-div {
+      text-align: right;
+      padding: 80px 20px 20px 20px; }
+    .contact p {
+      line-height: 30px;
+      font-size: 25px; } }
 .contact {
-  padding: 50px 100px;
+  padding: 50px 20px;
   margin: 0 auto;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column; }
-  .contact #map {
-    height: 180px;
-    width: 400px;
-    margin: 30px auto; }
-  .contact h1 {
-    font-size: 34px;
-    margin: 14px auto;
-    color: #422225; }
-  .contact p {
-    line-height: 30px;
-    font-size: 25px;
-    color: #684E51; }
+  display: flex; }
+  .contact .right-div {
+    flex: 1;
+    padding: 20px; }
+    .contact .right-div #map {
+      width: 100%;
+      height: 300px; }
+    .contact .right-div h1 {
+      font-size: 34px;
+      margin: 14px auto;
+      color: #422225; }
+  .contact .left-div {
+    flex-shrink: 0;
+    overflow: auto;
+    flex: 1; }
+    .contact .left-div p {
+      color: #684E51; }
 
 .footer {
   display: flex;
