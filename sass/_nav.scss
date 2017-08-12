@@ -1,5 +1,5 @@
 @media screen and (min-width: 0px){
-  .nav-2-items{
+  .nav-items{
       width: 95%;
       .left-nav{
         flex: 1;
@@ -18,7 +18,7 @@
   }
 }
 @media screen and (min-width: 1024px){
-  .nav-2-items{
+  .nav-items{
       width: 960px;
       .left-nav{
         flex: 1;
@@ -36,7 +36,7 @@
       }
   }
 }
-.nav-2{
+.nav{
   background-color: $dark;
   width: 100%;
   position:fixed;
@@ -47,7 +47,7 @@
   flex-direction: column;
   top: 0;
   height:60px;
-  .nav-2-items{
+  .nav-items{
     margin:0 auto;
     flex: 1; 
     display: flex;
