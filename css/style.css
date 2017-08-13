@@ -162,8 +162,25 @@ body {
     display: table-cell;
     vertical-align: middle; }
 
+@media screen and (max-width: 576px) {
+  .content {
+    height: 300px; }
+
+  .contact {
+    height: 500px; } }
+@media screen and (min-width: 576px) {
+  .content {
+    height: 400px; }
+
+  .contact {
+    height: 600px; } }
+@media screen and (min-width: 768px) {
+  .content {
+    height: 500px; } }
+@media screen and (min-width: 992px) {
+  .content {
+    height: 600px; } }
 .content {
-  height: 600px;
   position: relative; }
   .content .text-wrapper {
     width: 100%;
