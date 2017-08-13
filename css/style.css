@@ -244,7 +244,7 @@ body {
   padding-top: 150px; }
 
 .come-in {
-  transform: translateY(-50px);
+  transform: translateY(50px);
   animation: come-in 1.0s ease forwards; }
 
 .already-visible {
