@@ -51,7 +51,8 @@ $(document).ready(function () {
 var win = $(window);
 
 var allMods1 = $(".row");
-var allMods2 = $(".parallax-window .text-wrapper h1");
+var allMods2 = $(".parallax-window");
+var allMods3 = $(".parallax-window .text-wrapper h1");
 
 allMods1.each(function(i, el) {
   var el = $(el);
