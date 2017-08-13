@@ -51,8 +51,6 @@ $(document).ready(function () {
 var win = $(window);
 
 var allMods1 = $(".row");
-var allMods2 = $(".parallax-window");
-var allMods3 = $(".parallax-window .text-wrapper h1");
 
 allMods1.each(function(i, el) {
   var el = $(el);
@@ -60,27 +58,11 @@ allMods1.each(function(i, el) {
     el.addClass("already-visible"); 
   } 
 });
-allMods2.each(function(i, el) {
-  var el = $(el);
-  if (el.visible(true)) {
-    el.addClass("already-visible"); 
-  } 
-});
-
 win.scroll(function(event) {
-  
   allMods1.each(function(i, el) {
     var el = $(el);
     if (el.visible(true)) {
         el.addClass("come-in"); 
     }
   });
-
-  allMods2.each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-        el.addClass("come-in"); 
-    }
-  });
-  
 });
