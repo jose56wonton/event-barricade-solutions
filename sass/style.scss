@@ -43,25 +43,18 @@ table {
 *, *::before, *::after{
   box-sizing: border-box;
 }
-
+// Fonts and Colors
 $cherry: #ff5000;
 $dark: #422225;
 $light: #684E51;
-$lighter: #B3A6A8;
-
-
 @font-face {
 	font-family: 'icon_font';
 	src: url('../fonts/tgl_0-1451eng.ttf'); 	
 }
-*{
-  font-family: 'icon_font';  
-  font-family: 'Open Sans', sans-serif;
+ *{
   font-family: 'Raleway', sans-serif;
 }
-
-
-
+// Font responsiveness
 @media screen and (max-width: 576px){
   body{font-size: 12px;}
 }
@@ -80,24 +73,24 @@ $lighter: #B3A6A8;
 
 
 
-html, body { overflow-x: hidden; }
+html, body {
+   overflow-x: hidden;
+}
 .container-fluid{
   margin: 0;
   padding: 0;
 }
-
 body{
   margin: 0;
   padding: 0; 
 }
-
 .parallax-window{
   height: 100vh;
   background: transparent;
 }
 
 
-
+// Navigation 
 .nav{
   background-color: $dark;
   width: 100%;
@@ -126,8 +119,7 @@ body{
     justify-content: flex-end;
     align-items: center;
     text-align: center;
-  }
-  
+  }  
   a{
     padding: 5px;
     color: #fff;
@@ -135,10 +127,8 @@ body{
     display: inline-block;
     position: relative;
     z-index: 0;
-    cursor: pointer;
-    
-  }
-  
+    cursor: pointer;    
+  }  
   a:before,a:after{
     position: absolute;
     opacity: 0;
@@ -161,27 +151,11 @@ body{
     width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 .cover-1{
   width: 100%; 
-  height: 100vh;
+  height: 101vh;
   display:table;
-  position: relative; 
-  // background-image: url("../img/cover1.jpg");  
-  // background-attachment: fixed;
-  // background-size: cover;
-  
+  position: relative;  
 }
 .cover-1:before{
   content: '';
@@ -194,24 +168,19 @@ body{
 }
 .parallax{
   position: relative;
-
-
   .text-wrapper{
     width:80%;
     position: absolute;  
     top:50%;
     left:50%;
-    transform: translate(-50%,-50%);
-    
+    transform: translate(-50%,-50%);    
     h1{
     font-size: 5em;
     font-family: 'icon_font';  
     color: white;
     text-align: center;
-    }
-    
-  }
- 
+    }    
+  } 
   img{
     position: absolute;
     width:60%;
@@ -232,8 +201,7 @@ body{
     left:50%;
     transform: translate(-50%,-50%);
   }
-  h1 a{
-      
+  h1 a{      
     font-size: 3.5em;
     font-family: 'icon_font';  
     color: $cherry;
@@ -254,14 +222,10 @@ body{
     z-index:1;
   }
 }
-
 .cover-2{  
  width: 100%; 
   height: 100vh;
   display:table; 
-  // background-image: url("../img/cover2.JPG");
-  // background-attachment: fixed;
-  // background-size: cover;
 }
 .cover-2:before{
   content: '';
@@ -275,10 +239,7 @@ body{
 .cover-3{
   width: 100%; 
   height: 100vh;
-  display:table; 
-  // background-image: url("../img/cover3.JPG");
-  // background-attachment: fixed;
-  // background-size: cover;
+  display:table;
 }
 .cover-3:before{
   content: '';
@@ -293,9 +254,6 @@ body{
   width: 100%; 
   height: 100vh;
   display:table; 
-  // background-image: url("../img/cover4.JPG");
-  // background-attachment: fixed;
-  // background-size: cover;
 }
 .cover-4:before{
   content: '';
@@ -306,7 +264,6 @@ body{
   bottom: 0;
   background: rgba(0,0,0,0.3);
 }
-
 .footer{
   display: flex;
   text-align: center;
@@ -319,3 +276,18 @@ body{
 .anchor{
   padding-top: 150px;
 }
+// This is the code I used for the slide in functionality on a lot of the text.
+// As you can see it is not of my creation; however, it is not a copy and paste
+// I did edit about 50% of the code.
+.come-in {
+  transform: translateY(-50px);
+  animation: come-in 1.0s ease forwards;
+}
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+

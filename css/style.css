@@ -46,8 +46,6 @@ table {
   font-family: 'icon_font';
   src: url("../fonts/tgl_0-1451eng.ttf"); }
 * {
-  font-family: 'icon_font';
-  font-family: 'Open Sans', sans-serif;
   font-family: 'Raleway', sans-serif; }
 
 @media screen and (max-width: 576px) {
@@ -129,7 +127,7 @@ body {
 
 .cover-1 {
   width: 100%;
-  height: 100vh;
+  height: 101vh;
   display: table;
   position: relative; }
 
@@ -244,5 +242,17 @@ body {
 
 .anchor {
   padding-top: 150px; }
+
+.come-in {
+  transform: translateY(-50px);
+  animation: come-in 1.0s ease forwards; }
+
+.already-visible {
+  transform: translateY(0);
+  animation: none; }
+
+@keyframes come-in {
+  to {
+    transform: translateY(0); } }
 
 /*# sourceMappingURL=style.css.map */
