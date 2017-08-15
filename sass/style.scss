@@ -216,7 +216,7 @@ body{
 @media screen and (min-width: 992px){
   .content{
     height: 600px;
-  }
+  } 
 }
 .content{ 
   position: relative;
@@ -226,6 +226,9 @@ body{
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+
+    
+    
   }
   h1 a{      
     font-size: 3.5em;
@@ -314,12 +317,28 @@ body{
   }
 }
 .footer{
-  display: flex;
+  
   text-align: center;
   justify-content:center;
   align-content:center;
   background-color: $dark;
   color: white;
+  div{
+    margin-bottom: 2em;
+  }
+  a{
+    margin: 0 .8em;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition:.15s ease;
+    h3{
+      font-size: .8em;
+    }
+  }
+  a:hover{
+    color:$light;  
+  }
 }
 .anchor{
   padding-top: 150px;

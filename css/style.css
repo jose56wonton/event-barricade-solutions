@@ -261,12 +261,23 @@ body {
   .footer {
     padding: 100px; } }
 .footer {
-  display: flex;
   text-align: center;
   justify-content: center;
   align-content: center;
   background-color: #422225;
   color: white; }
+  .footer div {
+    margin-bottom: 2em; }
+  .footer a {
+    margin: 0 .8em;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: .15s ease; }
+    .footer a h3 {
+      font-size: .8em; }
+  .footer a:hover {
+    color: #684E51; }
 
 .anchor {
   padding-top: 150px; }
