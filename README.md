@@ -2,7 +2,7 @@
 This is my first freelance job. I was created for a company called Event Barricade Solutions
 
 ### Demo
-It can be found at this [url](https://jose56wonton.github.io/event-barricade-solutions/)
+It can be found at this [url](https://joshuawootonn.github.io/event-barricade-solutions/)
 
 ### New Stuff
 Some technologies I used extensively for the first time were Sass, Parallax.js, and Bootstrap.
